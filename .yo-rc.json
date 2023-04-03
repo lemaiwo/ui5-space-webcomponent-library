@@ -1,0 +1,15 @@
+{
+  "generator-ui5-library": {
+    "libraryname": "SpaceLibrary",
+    "namespace": "be.wl",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.111.1",
+    "author": "lemaiwo",
+    "newdir": true,
+    "namespaceURI": "be/wl",
+    "librarynamespace": "be.wl.SpaceLibrary",
+    "librarynamespaceURI": "be/wl/SpaceLibrary",
+    "librarybasepath": "../../../",
+    "frameworklowercase": "openui5"
+  }
+}

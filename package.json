@@ -1,0 +1,30 @@
+{
+  "name": "SpaceLibrary",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@ui5/cli": "^2.9.3",
+    "@ui5/tooling-webc": "^0.2.4",
+    "karma": "^6.1.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-ui5": "^2.3.3",
+    "rimraf": "^4.4.1",
+    "ui5-middleware-livereload": "^0.5.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "@ui5/tooling-webc",
+      "ui5-middleware-livereload"
+    ]
+  },
+  "scripts": {
+    "prebuild": "rimraf src/webc/lib/thirdparty/ && ui5-webc-prebuild",
+    "generate": "ui5-webc-generate",
+    "build": "ui5 build --clean-dest",
+    "start": "ui5 serve --open test-resources/be/wl/SpaceLibrary/Example.html",
+    "testsuite": "ui5 serve --open test-resources/be/wl/SpaceLibrary/qunit/testsuite.qunit.html",
+    "test": "karma start --browsers=ChromeHeadless --singleRun=true"
+  },
+  "license": "UNLICENSED"
+}
