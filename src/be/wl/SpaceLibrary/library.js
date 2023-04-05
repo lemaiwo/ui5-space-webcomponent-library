@@ -3,65 +3,47 @@
  */
 
 /**
- * Initialization Code and shared classes of library be.wl.SpaceLibrary.
+ * Initialization Code and shared classes of library be.wl.SpaceLibrary
  */
 sap.ui.define([
-	"sap/ui/core/library"
-], function () {
-	"use strict";
+		"sap/ui/webc/common/library",
+		"./thirdparty/Assets",
+		"./library.config"
+	], // library dependency
+	function(commonLibrary) {
 
-	// delegate further initialization of this library to the Core
-	// Hint: sap.ui.getCore() must still be used to support preload with sync bootstrap!
-	sap.ui.getCore().initLibrary({
-		name: "be.wl.SpaceLibrary",
-		version: "${version}",
-		dependencies: [ // keep in sync with the ui5.yaml and .library files
-			"sap.ui.core"
-		],
-		types: [
-			"be.wl.SpaceLibrary.ExampleColor"
-		],
-		interfaces: [],
-		controls: [
-			"be.wl.SpaceLibrary.Example"
-		],
-		elements: [],
-		noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
+		"use strict";
+
+		/**
+		 * SAPUI5 library with controls based on UI5 Web Components
+		 *
+		 * @namespace
+		 * @alias be.wl.SpaceLibrary
+		 * @author SAP SE
+		 * @version ${version}
+		 * @public
+		 * @since 1.92.0
+		 * @experimental Since 1.92.0 This API is experimental and might change significantly.
+		 */
+		var thisLib = sap.ui.getCore().initLibrary({
+			name: "be.wl.SpaceLibrary",
+			version: "${version}",
+			dependencies: ["sap.ui.core", "sap.ui.webc.common"],
+			noLibraryCSS: true,
+			designtime: "be/wl/SpaceLibrary/designtime/library.designtime",
+			interfaces: [
+
+			],
+			types: [
+
+			],
+			controls: [
+				"be.wl.SpaceLibrary.SpaceComponent",
+				"be.wl.SpaceLibrary.SpaceItemComponent"
+			],
+			elements: [],
+			extensions: {}
+		});
+		return thisLib;
+
 	});
-
-	/**
-	 * Some description about <code>SpaceLibrary</code>
-	 *
-	 * @namespace
-	 * @name be.wl.SpaceLibrary
-	 * @author lemaiwo
-	 * @version ${version}
-	 * @public
-	 */
-	var thisLib = be.wl.SpaceLibrary;
-
-	/**
-	 * Semantic Colors of the <code>be.wl.SpaceLibrary.Example</code>.
-	 *
-	 * @enum {string}
-	 * @public
-	 */
-	thisLib.ExampleColor = {
-
-		/**
-		 * Default color (brand color)
-		 * @public
-		 */
-		Default : "Default",
-
-		/**
-		 * Highlight color
-		 * @public
-		 */
-		Highlight : "Highlight"
-
-	};
-
-	return thisLib;
-
-});

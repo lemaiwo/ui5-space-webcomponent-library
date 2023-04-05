@@ -57,7 +57,7 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
    * <code>import SpacePackage/dist/SpaceItemComponent.js";</code>
    *
    * @constructor
-   * @alias be.wl.SpaceItemComponent
+   * @alias be.wl.SpaceLibrary.SpaceItemComponent
    * @extends sap.ui.webc.base.UI5Element
    * @tagname ui5-space-item-component
    * @public
