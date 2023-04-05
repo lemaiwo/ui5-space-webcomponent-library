@@ -27,12 +27,29 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
   const metadata = {
     tag: "ui5-space-component",
     properties: {
+      /**
+       * Defines the intro.
+       * <br><br>
+       *
+       * @type {string}
+       * @defaultvalue ""
+       * @public
+       */
       intro: {
         type: String
       }
     },
     managedSlots: true,
     slots: {
+      /**
+       * Defines the items.
+       * <br><br>
+       * <b>Note:</b> Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.
+       *
+       * @type {HTMLElement[]}
+       * @slot
+       * @public
+       */
       items: {
         "type": HTMLElement,
         "individualSlots": false
@@ -47,7 +64,7 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
    * The <code>space-component</code> component is a demo component that displays some text.
    *
    * @constructor
-   * @alias be.wl.SpaceComponent
+   * @alias be.wl.SpaceLibrary.SpaceComponent
    * @extends sap.ui.webc.base.UI5Element
    * @tagname ui5-space-component
    * @public
