@@ -1,4 +1,4 @@
-sap.ui.define(["exports", "@ui5/webcomponents-base/dist/renderer/LitRenderer"], function (_exports, _LitRenderer) {
+sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"], function (_exports, _LitRenderer) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {

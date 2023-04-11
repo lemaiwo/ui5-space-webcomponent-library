@@ -1,4 +1,4 @@
-sap.ui.define(['require', "@ui5/webcomponents-base/dist/asset-registries/Themes"], function (require, _Themes) {
+sap.ui.define(['require', "sap/ui/webc/common/thirdparty/base/asset-registries/Themes"], function (require, _Themes) {
   "use strict";
 
   const loadThemeProperties = async themeName => {

@@ -35,17 +35,13 @@ sap.ui.define([
 	var SpaceComponent = WebComponent.extend("be.wl.SpaceLibrary.SpaceComponent", {
 		metadata: {
 			library: "be.wl.SpaceLibrary",
+			// tag: "ui5-space-component-ui5",
 			tag: "space-component",
 			properties: {
 
 				intro: {
 					type: "string",
 				},
-
-				logo: {
-					type: "string",
-				},
-
 				/**
 				 * Defines the height of the control
 				 */
@@ -73,7 +69,7 @@ sap.ui.define([
 				 * <b>Note:</b> Use the <code>sap.ui.webc.main.SegmentedButtonItem</code> for the intended design.
 				 */
 				items: {
-					type: "be.wl.SpaceLibrary.SpaceItemComponent",
+					type: "be.wl.SpaceLibrary.ISpaceItemComponent",
 					multiple: true
 				}
 			}

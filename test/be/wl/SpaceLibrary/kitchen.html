@@ -13,23 +13,25 @@
         sap.ui.getCore().attachInit(function () {
             sap.ui.require([
                 "be/wl/SpaceLibrary/SpaceComponent",
-                "be/wl/SpaceLibrary/SpaceItemComponent"
+                "be/wl/SpaceLibrary/SpaceItemComponent",
+                "sap/m/HBox"
             ], function (
-                SpaceComponent, SpaceItemComponent
+                SpaceComponent, SpaceItemComponent,HBox
             ) {
 
                 var oSpaceComponent = new SpaceComponent({
-                    intro: "intro test",
-                    // height:"500px",
-                    // width:"750px",
-                    items: [new SpaceItemComponent({
-                        title:"item 1",
-                        description:"blablablal"
-                    }),new SpaceItemComponent({
-                        title:"item 2",
-                        description:"blablablal"
-                    })]
-                });
+                        intro: "intro test",
+                        logo: "./img/star-wars-intro.png",
+                        // height:"500px",
+                        // width:"800px",
+                        items: [new SpaceItemComponent({
+                            title: "item 1",
+                            description: "blablablal"
+                        }), new SpaceItemComponent({
+                            title: "item 2",
+                            description: "blablablal"
+                        })]
+                    });
                 oSpaceComponent.placeAt("testSpaceComponent");
             });
         });

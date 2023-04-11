@@ -35,7 +35,11 @@ sap.ui.define([
 	var SpaceItemComponent = WebComponent.extend("be.wl.SpaceLibrary.SpaceItemComponent", {
 		metadata: {
 			library: "be.wl.SpaceLibrary",
+			// tag: "ui5-space-item-component-ui5",
 			tag: "space-item-component",
+			interfaces:[
+				"be.wl.SpaceLibrary.ISpaceItemComponent"
+			],
 			properties: {
 				title: {
 					type: "string",
@@ -44,7 +48,6 @@ sap.ui.define([
 					type: "string",
 				}
 			}
-
 		}
 	});
 

@@ -1,4 +1,4 @@
-sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webcomponents-base/dist/decorators/customElement", "@ui5/webcomponents-base/dist/renderer/LitRenderer", "./generated/templates/SpaceItemComponentTemplate.lit", "./generated/themes/SpaceItemComponent.css"], function (_exports, _UI5Element, _customElement, _LitRenderer, _SpaceItemComponentTemplate, _SpaceItemComponent) {
+sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "./generated/templates/SpaceItemComponentTemplate.lit", "./generated/themes/SpaceItemComponent.css"], function (_exports, _UI5Element, _customElement, _LitRenderer, _SpaceItemComponentTemplate, _SpaceItemComponent) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -27,7 +27,7 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
    * @public
    */
   const metadata = {
-    tag: "ui5-space-item-component",
+    tag: "space-item-component",
     properties: /** @lends sap.ui.webc.SpacePackage.SpaceItemComponent.prototype */{
       title: {
         type: String
@@ -59,7 +59,7 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
    * @constructor
    * @alias be.wl.SpaceLibrary.SpaceItemComponent
    * @extends sap.ui.webc.base.UI5Element
-   * @tagname ui5-space-item-component
+   * @tagname space-item-component
    * @public
    */
   let SpaceItemComponent = class SpaceItemComponent extends _UI5Element.default {

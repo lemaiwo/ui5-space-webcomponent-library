@@ -1,4 +1,4 @@
-sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webcomponents-base/dist/decorators/customElement", "@ui5/webcomponents-base/dist/renderer/LitRenderer", "@ui5/webcomponents-base/dist/i18nBundle", "./generated/templates/SpaceComponentTemplate.lit", "./generated/themes/SpaceComponent.css", "./generated/i18n/i18n-defaults"], function (_exports, _UI5Element, _customElement, _LitRenderer, _i18nBundle, _SpaceComponentTemplate, _SpaceComponent, _i18nDefaults) {
+sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "sap/ui/webc/common/thirdparty/base/i18nBundle", "./generated/templates/SpaceComponentTemplate.lit", "./generated/themes/SpaceComponent.css", "./generated/i18n/i18n-defaults"], function (_exports, _UI5Element, _customElement, _LitRenderer, _i18nBundle, _SpaceComponentTemplate, _SpaceComponent, _i18nDefaults) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -25,7 +25,7 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
   // Styles
 
   const metadata = {
-    tag: "ui5-space-component",
+    tag: "space-component",
     properties: {
       /**
        * Defines the intro.
@@ -36,6 +36,17 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
        * @public
        */
       intro: {
+        type: String
+      },
+      /**
+       * Defines the intro.
+       * <br><br>
+       *
+       * @type {string}
+       * @defaultvalue ""
+       * @public
+       */
+      logo: {
         type: String
       }
     },
@@ -66,13 +77,17 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
    * @constructor
    * @alias be.wl.SpaceLibrary.SpaceComponent
    * @extends sap.ui.webc.base.UI5Element
-   * @tagname ui5-space-component
+   * @tagname space-component
    * @public
    */
   let SpaceComponent = SpaceComponent_1 = class SpaceComponent extends _UI5Element.default {
+    // private intro: string = '';
     constructor() {
       super();
     }
+    // static get observedAttributes() {
+    // 	return ['intro','logo'];
+    // }
     static get metadata() {
       return metadata;
     }
@@ -90,6 +105,34 @@ sap.ui.define(["exports", "@ui5/webcomponents-base/dist/UI5Element", "@ui5/webco
     }
     get pleaseWaitText() {
       return SpaceComponent_1.i18nBundle.getText(_i18nDefaults.PLEASE_WAIT);
+    }
+    onAfterRendering() {
+      const numStars = 100;
+      // this.shadowRoot!.addEventListener('click', e => {
+      // 	const event = new CustomEvent('doSomething', {
+      // 		composed: true,
+      // 		bubbles: true,
+      // 		detail: { intro: this.intro }
+      // 	});
+      // 	this.shadowRoot!.dispatchEvent(event);
+      // });
+      const mainDiv = this.shadowRoot.querySelector(".star-wars-intro");
+      // For every star we want to display
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        const xy = this.getRandomPosition(mainDiv);
+        star.style.top = `${xy[0]}px`;
+        star.style.left = `${xy[1]}px`;
+        mainDiv.append(star);
+      }
+    }
+    getRandomPosition(element) {
+      const y = element.offsetWidth;
+      const x = element.offsetHeight;
+      const randomX = Math.floor(Math.random() * x);
+      const randomY = Math.floor(Math.random() * y);
+      return [randomX, randomY];
     }
   };
   SpaceComponent = SpaceComponent_1 = __decorate([(0, _customElement.default)("space-component")], SpaceComponent);
