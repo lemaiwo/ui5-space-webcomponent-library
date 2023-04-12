@@ -38,7 +38,7 @@ customConfiguration:
           - '!**/api.json'
         outputPath: "src/be/wl/SpaceLibrary/thirdparty/" # where to create the UI5 controls
         generation: # if set, control wrappers will be generated
-          suffix: "-ui5"
+          suffix: ""
           replaceJSDocNamespaces: # replace namespaces in api.json
           #noControl: # do not generate wrappers at all
           noTestPage: # do not generate test pages for these controls
