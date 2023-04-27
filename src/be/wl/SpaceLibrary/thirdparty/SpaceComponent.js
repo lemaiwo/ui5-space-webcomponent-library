@@ -1,4 +1,4 @@
-sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "sap/ui/webc/common/thirdparty/base/i18nBundle", "./generated/templates/SpaceComponentTemplate.lit", "./generated/themes/SpaceComponent.css", "./generated/i18n/i18n-defaults"], function (_exports, _UI5Element, _customElement, _LitRenderer, _i18nBundle, _SpaceComponentTemplate, _SpaceComponent, _i18nDefaults) {
+sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/decorators/property", "sap/ui/webc/common/thirdparty/base/decorators/slot", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "sap/ui/webc/common/thirdparty/base/i18nBundle", "./generated/templates/SpaceComponentTemplate.lit", "./generated/themes/SpaceComponent.css", "./generated/i18n/i18n-defaults"], function (_exports, _UI5Element, _customElement, _property, _slot, _LitRenderer, _i18nBundle, _SpaceComponentTemplate, _SpaceComponent, _i18nDefaults) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -7,6 +7,8 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
   _exports.default = void 0;
   _UI5Element = _interopRequireDefault(_UI5Element);
   _customElement = _interopRequireDefault(_customElement);
+  _property = _interopRequireDefault(_property);
+  _slot = _interopRequireDefault(_slot);
   _LitRenderer = _interopRequireDefault(_LitRenderer);
   _SpaceComponentTemplate = _interopRequireDefault(_SpaceComponentTemplate);
   _SpaceComponent = _interopRequireDefault(_SpaceComponent);
@@ -24,49 +26,6 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
 
   // Styles
 
-  const metadata = {
-    tag: "space-component",
-    properties: {
-      /**
-       * Defines the intro.
-       * <br><br>
-       *
-       * @type {string}
-       * @defaultvalue ""
-       * @public
-       */
-      intro: {
-        type: String
-      },
-      /**
-       * Defines the intro.
-       * <br><br>
-       *
-       * @type {string}
-       * @defaultvalue ""
-       * @public
-       */
-      logo: {
-        type: String
-      }
-    },
-    managedSlots: true,
-    slots: {
-      /**
-       * Defines the items.
-       * <br><br>
-       * <b>Note:</b> Although this slot accepts HTML Elements, it is strongly recommended that you only use text in order to preserve the intended design.
-       *
-       * @type {HTMLElement[]}
-       * @slot
-       * @public
-       */
-      items: {
-        "type": HTMLElement,
-        "individualSlots": false
-      }
-    }
-  };
   /**
    * @class
    *
@@ -81,16 +40,13 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
    * @public
    */
   let SpaceComponent = SpaceComponent_1 = class SpaceComponent extends _UI5Element.default {
-    // private intro: string = '';
     constructor() {
       super();
     }
+    // private intro: string = '';
     // static get observedAttributes() {
     // 	return ['intro','logo'];
     // }
-    static get metadata() {
-      return metadata;
-    }
     static get render() {
       return _LitRenderer.default;
     }
@@ -135,6 +91,13 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
       return [randomX, randomY];
     }
   };
+  __decorate([(0, _property.default)()], SpaceComponent.prototype, "intro", void 0);
+  __decorate([(0, _property.default)()], SpaceComponent.prototype, "logo", void 0);
+  __decorate([(0, _slot.default)({
+    type: HTMLElement,
+    "default": true,
+    individualSlots: true
+  })], SpaceComponent.prototype, "items", void 0);
   SpaceComponent = SpaceComponent_1 = __decorate([(0, _customElement.default)("space-component")], SpaceComponent);
   SpaceComponent.define();
   var _default = SpaceComponent;

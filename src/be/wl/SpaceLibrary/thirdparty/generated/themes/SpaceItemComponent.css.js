@@ -13,7 +13,7 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/asset-registries/T
   const styleData = {
     packageName: "SpacePackage",
     fileName: "themes\SpaceItemComponent.css.ts",
-    content: ".space-article>.content-header{text-align:center}"
+    content: ".space-article>h2{text-align:center}"
   };
   var _default = styleData;
   _exports.default = _default;

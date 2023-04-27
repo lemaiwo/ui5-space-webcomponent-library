@@ -37,14 +37,23 @@ sap.ui.define([
 			library: "be.wl.SpaceLibrary",
 			tag: "space-item-component",
 			properties: {
-				title: {
-					type: "string",
-				},
+
+				/**
+				 * Defines the description of the space item component.
+				 */
 				description: {
 					type: "string",
+					defaultValue: ""
+				},
+
+				/**
+				 * Defines the title of the space item component.
+				 */
+				title: {
+					type: "string",
+					defaultValue: ""
 				}
 			}
-
 		}
 	});
 

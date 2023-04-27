@@ -38,20 +38,28 @@ sap.ui.define([
 			tag: "space-component",
 			properties: {
 
-				intro: {
-					type: "string",
-				},
-
-				logo: {
-					type: "string",
-				},
-
 				/**
 				 * Defines the height of the control
 				 */
 				height: {
 					type: "sap.ui.core.CSSSize",
 					mapping: "style"
+				},
+
+				/**
+				 * Defines the intro of the space component.
+				 */
+				intro: {
+					type: "string",
+					defaultValue: ""
+				},
+
+				/**
+				 * Defines the logo of the space component.
+				 */
+				logo: {
+					type: "string",
+					defaultValue: ""
 				},
 
 				/**
@@ -66,15 +74,12 @@ sap.ui.define([
 			aggregations: {
 
 				/**
-				 * Defines the items of <code>sap.ui.webc.main.SegmentedButton</code>. <br>
-				 * <br>
-				 * <b>Note:</b> Multiple items are allowed. <br>
-				 * <br>
-				 * <b>Note:</b> Use the <code>sap.ui.webc.main.SegmentedButtonItem</code> for the intended design.
+				 * Defines the articles of the component.
 				 */
 				items: {
 					type: "be.wl.SpaceLibrary.SpaceItemComponent",
-					multiple: true
+					multiple: true,
+					slot:"items"
 				}
 			}
 		}

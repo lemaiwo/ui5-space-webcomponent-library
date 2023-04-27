@@ -1,4 +1,4 @@
-sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "./generated/templates/SpaceItemComponentTemplate.lit", "./generated/themes/SpaceItemComponent.css"], function (_exports, _UI5Element, _customElement, _LitRenderer, _SpaceItemComponentTemplate, _SpaceItemComponent) {
+sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/ui/webc/common/thirdparty/base/decorators/customElement", "sap/ui/webc/common/thirdparty/base/renderer/LitRenderer", "sap/ui/webc/common/thirdparty/base/decorators/property", "./generated/templates/SpaceItemComponentTemplate.lit", "./generated/themes/SpaceItemComponent.css"], function (_exports, _UI5Element, _customElement, _LitRenderer, _property, _SpaceItemComponentTemplate, _SpaceItemComponent) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -8,6 +8,7 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
   _UI5Element = _interopRequireDefault(_UI5Element);
   _customElement = _interopRequireDefault(_customElement);
   _LitRenderer = _interopRequireDefault(_LitRenderer);
+  _property = _interopRequireDefault(_property);
   _SpaceItemComponentTemplate = _interopRequireDefault(_SpaceItemComponentTemplate);
   _SpaceItemComponent = _interopRequireDefault(_SpaceItemComponent);
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -23,26 +24,6 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
 
   // Styles
 
-  /**
-   * @public
-   */
-  const metadata = {
-    tag: "space-item-component",
-    properties: /** @lends sap.ui.webc.SpacePackage.SpaceItemComponent.prototype */{
-      title: {
-        type: String
-      },
-      description: {
-        type: String
-      }
-    },
-    slots: /** @lends sap.ui.webc.SpacePackage.SpaceItemComponent.prototype */{
-      //
-    },
-    events: /** @lends sap.ui.webc.SpacePackage.SpaceItemComponent.prototype */{
-      //
-    }
-  };
   /**
    * @class
    *
@@ -66,9 +47,6 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
     constructor() {
       super();
     }
-    static get metadata() {
-      return metadata;
-    }
     static get render() {
       return _LitRenderer.default;
     }
@@ -83,6 +61,8 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
     }
     static async onDefine() {}
   };
+  __decorate([(0, _property.default)()], SpaceItemComponent.prototype, "title", void 0);
+  __decorate([(0, _property.default)()], SpaceItemComponent.prototype, "description", void 0);
   SpaceItemComponent = __decorate([(0, _customElement.default)("space-item-component")], SpaceItemComponent);
   SpaceItemComponent.define();
   var _default = SpaceItemComponent;
