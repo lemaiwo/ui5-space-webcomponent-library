@@ -59,5 +59,6 @@ customConfiguration:
           includeSemanticFormSupport:
           features:
           versions:
-            be.wl.UI5WebcLib.Ui5HelloworldComponent: 1.0.0
+            be.wl.SpaceLibrary.SpaceComponent: 1.0.0
+            be.wl.SpaceLibrary.SpaceItemComponent: 1.0.0
           designtime:

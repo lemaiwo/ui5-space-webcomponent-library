@@ -13,8 +13,8 @@
     "karma-cli": "^2.0.0",
     "karma-ui5": "^2.3.3",
     "rimraf": "^4.4.1",
-    "ui5-middleware-livereload": "^0.5.1",
-    "SpacePackage":"file:../SpacePackage"
+    "SpacePackage": "file:../SpacePackage",
+    "ui5-middleware-livereload": "^0.5.1"
   },
   "ui5": {
     "dependencies": [
