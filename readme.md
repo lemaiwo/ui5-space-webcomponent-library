@@ -33,6 +33,10 @@ npm i -D @ui5/tooling-webc
     "prebuild": "rimraf src/webc/lib/thirdparty/ && ui5-webc-prebuild",
     "generate": "ui5-webc-generate",
 ```
+- Add following to `babaelUtils.js` in UI5WebcTooling `lib` folder
+```
+.replace(/\\/g,'/');
+```
 - Install webcomponent resources (icons)
 ```
 npm i -D @ui5/webcomponents @ui5/webcomponents-icons-tnt @ui5/webcomponents-icons-business-suite
@@ -130,6 +134,24 @@ var oSpaceComponent = new SpaceComponent({
 });
 ```
 - Run test page
+```
+npm start
+```
+
+### Test from app
+- Clone the demo app to test the control
+```
+git clone https://github.com/lemaiwo/ui5-space-webcomponent-app.git
+```
+- Navigate to the project
+```
+cd ui5-space-webcomponent-app
+```
+- Install dependencies
+```
+npm i
+```
+- Run the app
 ```
 npm start
 ```
