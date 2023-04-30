@@ -33,7 +33,7 @@ npm i -D @ui5/tooling-webc
     "prebuild": "rimraf src/webc/lib/thirdparty/ && ui5-webc-prebuild",
     "generate": "ui5-webc-generate",
 ```
-- Add following to `babaelUtils.js` in UI5WebcTooling `lib` folder
+- Add following to line `136` in `babelUtils.js` of UI5WebcTooling `lib` folder
 ```
 .replace(/\\/g,'/');
 ```
