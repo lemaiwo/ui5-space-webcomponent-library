@@ -8,9 +8,7 @@
 			"version": "1.0.0"
 		},
 		"title": "Space Library",
-		"description": "",
-		"ach": "",
-		"offline": true
+		"description": ""
 	},
 	"sap.ui": {
 		"technology": "UI5",
@@ -51,6 +49,6 @@
 	},
 	"sap.cloud": {
 		"public": true,
-		"service": "space"
+		"service": "spacelib"
 	}
 }

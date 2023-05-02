@@ -24,12 +24,12 @@ modules:
         - Name: spacelib_repo_host
           ServiceInstanceName: spacelib-html5-srv
           ServiceKeyName: spacelib-repo-host-key
-          sap.cloud.service: space
+          sap.cloud.service: spacelib
         - Authentication: OAuth2UserTokenExchange
           Name: spacelib_uaa
           ServiceInstanceName: spacelib-xsuaa-srv
           ServiceKeyName: spacelib-uaa-key
-          sap.cloud.service: space
+          sap.cloud.service: spacelib
         existing_destinations_policy: update
   build-parameters:
     no-source: true
