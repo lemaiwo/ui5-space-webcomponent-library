@@ -49,6 +49,6 @@
 	},
 	"sap.cloud": {
 		"public": true,
-		"service": "spacelib"
+		"service": "space"
 	}
 }

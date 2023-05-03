@@ -3,10 +3,10 @@ ID: spacelib
 description: SpaceLibrary
 version: 0.0.1
 modules:
-- name: spacelib-dest-content
+- name: space-dest-content
   type: com.sap.application.content
   requires:
-  - name: spacelib-dest-srv
+  - name: space-dest-srv
     parameters:
       content-target: true
   - name: spacelib-repo-host
@@ -24,12 +24,12 @@ modules:
         - Name: spacelib_repo_host
           ServiceInstanceName: spacelib-html5-srv
           ServiceKeyName: spacelib-repo-host-key
-          sap.cloud.service: spacelib
+          sap.cloud.service: space
         - Authentication: OAuth2UserTokenExchange
           Name: spacelib_uaa
           ServiceInstanceName: spacelib-xsuaa-srv
           ServiceKeyName: spacelib-uaa-key
-          sap.cloud.service: spacelib
+          sap.cloud.service: space
         existing_destinations_policy: update
   build-parameters:
     no-source: true
@@ -58,7 +58,7 @@ modules:
     - npm run build-for-deploy:cf
     supported-platforms: []
 resources:
-- name: spacelib-dest-srv
+- name: space-dest-srv
   type: org.cloudfoundry.managed-service
   parameters:
     config:
@@ -74,7 +74,7 @@ resources:
           existing_destinations_policy: update
       version: 1.0.0
     service: destination
-    service-name: spacelib-dest-srv
+    service-name: space-dest-srv
     service-plan: lite
 - name: spacelib-uaa
   type: org.cloudfoundry.managed-service
