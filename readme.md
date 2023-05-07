@@ -110,10 +110,6 @@ npm run prebuild
 ```
 npm run generate
 ```
-- Add slot property to aggeregation `items` in `SpaceComponent`
-```
-slot:"items"
-```
 
 ### Test generated controls
 - Copy logo to img folder
