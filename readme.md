@@ -33,10 +33,6 @@ npm i -D @ui5/tooling-webc
     "prebuild": "rimraf src/webc/lib/thirdparty/ && ui5-webc-prebuild",
     "generate": "ui5-webc-generate",
 ```
-- Add following to line `136` in `babelUtils.js` of UI5WebcTooling `lib` folder
-```
-.replace(/\\/g,'/');
-```
 - Install webcomponent resources (icons)
 ```
 npm i -D @ui5/webcomponents @ui5/webcomponents-icons-tnt @ui5/webcomponents-icons-business-suite
