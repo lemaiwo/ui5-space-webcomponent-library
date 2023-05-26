@@ -28,8 +28,8 @@ sap.ui.define([
 	 *
 	 * @constructor
 	 * @public
-	 * @since 1.92.0
-	 * @experimental Since 1.92.0 This control is experimental and its API might change significantly.
+	 * @since 1.0.0
+	 * @experimental Since 1.0.0 This control is experimental and its API might change significantly.
 	 * @alias be.wl.SpaceLibrary.SpaceComponent
 	 */
 	var SpaceComponent = WebComponent.extend("be.wl.SpaceLibrary.SpaceComponent", {
@@ -78,8 +78,7 @@ sap.ui.define([
 				 */
 				items: {
 					type: "be.wl.SpaceLibrary.SpaceItemComponent",
-					multiple: true,
-					slot:"items"
+					multiple: true
 				}
 			}
 		}
