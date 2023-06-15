@@ -12,8 +12,8 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/asset-registries/T
   (0, _Themes.registerThemePropertiesLoader)("SpacePackage", "sap_fiori_3", async () => _parametersBundle2.default);
   const styleData = {
     packageName: "SpacePackage",
-    fileName: "themes\SpaceItemComponent.css.ts",
-    content: ".space-article>h2{text-align:center}"
+    fileName: "themes\SpaceItemComponent.css",
+    content: "/* .space-article {\r\n    position: absolute;\r\n    top: 100%;\r\n    animation: scroll 120s linear 4s forwards;\r\n} */\r\n\r\n.space-article>h2 {\r\n    text-align: center;\r\n}"
   };
   var _default = styleData;
   _exports.default = _default;

@@ -7,7 +7,9 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/renderer/LitRender
   _exports.default = void 0;
   /* eslint no-unused-vars: 0 */
 
-  const block0 = (context, tags, suffix) => (0, _LitRenderer.html)`<div class="star-wars-intro"><!-- Blue Intro Text --><p class="intro-text">${(0, _LitRenderer.ifDefined)(context.intro)}</p><!-- Logo Image or Text goes in here --><h2 class="main-logo"><img src="${(0, _LitRenderer.ifDefined)(context.logo)}"/></h2><!-- All Scrolling Content Goes in here --><div class="main-content"><div class="title-content"><slot name="items"></slot></div></div></div>`;
+  function block0(context, tags, suffix) {
+    return (0, _LitRenderer.html)`<div class="star-wars-intro"><!-- Blue Intro Text --><p class="intro-text">${(0, _LitRenderer.ifDefined)(this.intro)}</p><!-- Logo Image or Text goes in here --><h2 class="main-logo"><img src="${(0, _LitRenderer.ifDefined)(this.logo)}"/></h2><!-- All Scrolling Content Goes in here --><div class="main-content"><div class="title-content"><slot></slot></div></div></div>`;
+  }
   var _default = block0;
   _exports.default = _default;
 });

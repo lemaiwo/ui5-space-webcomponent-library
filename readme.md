@@ -106,11 +106,6 @@ npm run prebuild
 ```
 npm run generate
 ```
-- Add slot items
-```
-,
-slot:"items"
-```
 ### Test generated controls
 - Copy logo to img folder
 - Add control to `kitchen.html`

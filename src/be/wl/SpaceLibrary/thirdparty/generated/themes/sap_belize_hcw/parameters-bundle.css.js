@@ -7,8 +7,8 @@ sap.ui.define(["exports"], function (_exports) {
   _exports.default = void 0;
   const styleData = {
     packageName: "SpacePackage",
-    fileName: "themes\sap_belize_hcw\parameters-bundle.css.ts",
-    content: ":root{--my-component-border-color:#000}"
+    fileName: "themes\sap_belize_hcw\parameters-bundle.css",
+    content: ":root [_ui5host] {\n    --my-component-border-color: black;\n}\n"
   };
   var _default = styleData;
   _exports.default = _default;

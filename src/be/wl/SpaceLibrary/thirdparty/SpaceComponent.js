@@ -75,28 +75,35 @@ sap.ui.define(["exports", "sap/ui/webc/common/thirdparty/base/UI5Element", "sap/
       const mainDiv = this.shadowRoot.querySelector(".star-wars-intro");
       // For every star we want to display
       for (let i = 0; i < numStars; i++) {
-        const star = document.createElement("div");
-        star.className = "star";
-        const xy = this.getRandomPosition(mainDiv);
-        star.style.top = `${xy[0]}px`;
-        star.style.left = `${xy[1]}px`;
-        mainDiv.append(star);
+        const {
+          top,
+          left
+        } = this.getRandomPosition(mainDiv);
+        mainDiv.append(this.getRandomStar(top, left));
       }
     }
+    getRandomStar(top, left) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.top = top;
+      star.style.left = left;
+      return star;
+    }
     getRandomPosition(element) {
-      const y = element.offsetWidth;
-      const x = element.offsetHeight;
-      const randomX = Math.floor(Math.random() * x);
-      const randomY = Math.floor(Math.random() * y);
-      return [randomX, randomY];
+      return {
+        top: `${this.getRandomNumber(element.offsetHeight)}px`,
+        left: `${this.getRandomNumber(element.offsetWidth)}px`
+      };
+    }
+    getRandomNumber(value) {
+      return Math.floor(Math.random() * value);
     }
   };
   __decorate([(0, _property.default)()], SpaceComponent.prototype, "intro", void 0);
   __decorate([(0, _property.default)()], SpaceComponent.prototype, "logo", void 0);
   __decorate([(0, _slot.default)({
     type: HTMLElement,
-    "default": true,
-    individualSlots: true
+    "default": true
   })], SpaceComponent.prototype, "items", void 0);
   SpaceComponent = SpaceComponent_1 = __decorate([(0, _customElement.default)("space-component")], SpaceComponent);
   SpaceComponent.define();
